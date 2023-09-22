@@ -16,13 +16,13 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String image;
-    private Integer price;
+    private String nome;
+    private String email;
+    private String senha;
 
     public User(UserRequestDTO data){
-        this.image = data.image();
-        this.price = data.price();
-        this.title = data.title();
+        this.nome = data.nome();
+        this.email = data.email();
+        this.senha = data.senha();
     }
 }
