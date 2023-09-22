@@ -19,7 +19,7 @@ public class UserController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
-    public void saveUser(@RequestBody UserRequestDTO userData){
+    public void saveUser(@RequestBody UserRequestDTO data){
         User userData = new User(data);
         repository.save(userData);
         return;
